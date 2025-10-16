@@ -6,6 +6,7 @@ import "../App.css";
 export default function Login() {
   const [form, setForm] = useState({ username: "", password: "" });
   const navigate = useNavigate();
+const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:8081";
 
   const handleLogin = async (e) => {
     e.preventDefault();
